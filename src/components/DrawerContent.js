@@ -8,7 +8,7 @@ import { SignInContext } from './../contexts/authContext';
 import { auth, db, firestore, } from './../../firebase';
 import { setDoc, addDoc, getDoc, collection, doc, getDocs, query, where } from 'firebase/firestore';
 
-const DrawerContent = ({ props, navigation }) => { // Pass navigation prop
+const DrawerContent = (props) => { // Pass navigation prop
   const { signedIn, dispatchSignedIn, createUser, signIn, logout, user, handleSignOut, setUser } = useContext(SignInContext);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [userData, setUserData] = useState({});

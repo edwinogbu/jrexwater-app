@@ -15,7 +15,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import COLORS from './../global/LandingColors';
 import products from './../global/constants/products';
-import categories from '../global/constants/categories';
+
 import HomeHeader from './../components/HomeHeader';
 
 import * as IntentLauncher from 'expo-intent-launcher';

@@ -22,22 +22,16 @@ import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import COLORS from './../global/LandingColors';
 import {  StyleSheet } from 'react-native'
 import ProfileScreen from './../screens/ProfileScreen';
-// import ProfileDetailScreen from './../screens/ProfileDetailScreen';
-// import UserProfile from './../screens/UserProfile';
 import UserList from './../screens/UserList';
-// import PhoneCallButton from '../screens/PhoneCallButton';
-// import SettingsScreen from './../SettingScreen';
-// import ChatScreen from './../screens/ChatScreen';
 import CustomerReceiptScreen from './../screens/CustomerReceiptScreen';
 import TransactionHistoryScreen from './../screens/TransactionHistoryScreen';
 import TransactionHistoryDetailScreen from './../TransactionHistoryDetailScreen ';
 import { View } from 'react-native';
 import { collection, query, where, getDocs } from 'firebase/firestore';
-import { db } from './../../firebase'; // Assuming you have already imported and initialized Firebase
+import { db } from './../../firebase'; 
 import SalesReportScreen from './../screens/SalesReportScreen';
 import SalesReportDetailScreen from './../SalesReportDetailScreen';
 import UserListScreen from './../screens/UserListScreen';
-// import ConfirmationScreen from './../screens/ConfirmationScreen';
 
 
 

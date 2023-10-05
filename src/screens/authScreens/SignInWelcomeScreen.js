@@ -74,14 +74,7 @@ const SignInWelcomeScreen = ({ navigation }) => {
       setNameError('');
     }
   };
-  // const validateAddress = () => {
-  //   if (name.trim() === '') {
-  //     setAddressError('Address is required');
-  //   } else {
-  //     setAddressError('');
-  //   }
-  // };
-  
+
   const validateEmail = () => {
     if (email.trim() === '') {
       setEmailError('Email is required');

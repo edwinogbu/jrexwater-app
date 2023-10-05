@@ -74,7 +74,7 @@ export const SignInContextProvider = ({ children, navigation }) => { // Pass nav
           email: user.email,
           displayName: user.displayName,
           phoneNumber: user.phoneNumber,
-          Address: user.address,
+         
         });
         dispatchSignedIn({ type: 'UPDATE_SIGN_IN', payload: { userToken: user.uid } });
       } else {
@@ -104,7 +104,7 @@ export const SignInContextProvider = ({ children, navigation }) => { // Pass nav
         email: user.email,
         displayName: user.displayName,
         phoneNumber: user.phoneNumber,
-        Address: user.address,
+        
       });
     } catch (error) {
       console.log('Sign in error:', error);
@@ -143,7 +143,7 @@ export const SignInContextProvider = ({ children, navigation }) => { // Pass nav
         email: user.email,
         displayName: user.displayName || name,
         phoneNumber: user.phoneNumber,
-        Address: user.address,
+        
       });
     } catch (error) {
       console.log('Sign up error:', error);
