@@ -23,10 +23,12 @@
     "@react-navigation/native-stack": "^6.9.12",
     "@react-navigation/stack": "^6.3.16",
     "expo": "^48.0.19",
+    "expo-intent-launcher": "~10.5.2",
+    "expo-print": "~12.2.1",
     "expo-secure-store": "^12.1.1",
+    "expo-sharing": "~11.2.2",
     "expo-status-bar": "~1.4.4",
     "firebase": "^9.22.1",
-    "flutterwave-react-native": "^1.0.4",
     "formik": "^2.4.1",
     "lodash": "^4.17.21",
     "react": "18.2.0",
@@ -56,10 +58,7 @@
     "react-native-vector-icons": "^9.2.0",
     "react-native-web": "~0.18.7",
     "react-native-webview": "11.26.0",
-    "yup": "^1.2.0",
-    "expo-intent-launcher": "~10.5.2",
-    "expo-print": "~12.2.1",
-    "expo-sharing": "~11.2.2"
+    "yup": "^1.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
