@@ -16,19 +16,10 @@ import { Icon, Header } from 'react-native-elements';
 import { Ionicons, Entypo } from '@expo/vector-icons';
 import  Swiper  from 'react-native-swiper';
 
-import { createUserWithEmailAndPassword } from 'firebase/auth';
-import {  auth, db,collection ,addDoc,setDoc, doc } from './../../../firebase';
-
-import AsyncStorage from '@react-native-async-storage/async-storage';
-
-
-import { signInWithPopup } from 'firebase/auth';
-
-
 
 
 const SignInWelcomeScreen = ({ navigation }) => {
-  const {signIn, signUp, logIn, dispatchSignedIn, user, setUser} = useContext(SignInContext)
+  const {signIn, signUp, setUser} = useContext(SignInContext)
 
   const [signUpModalVisible, setSignUpModalVisible] = useState(false);
   const [signInModalVisible, setSignInModalVisible] = useState(false);
@@ -278,6 +269,8 @@ const formattedDate = `${year}-${month}-${day}`;
               value={email}
               onChangeText={setEmail}
               onBlur={validateEmail}
+              keyboardType="email-address"
+              autoCapitalize="none"
             />
             {emailError !== '' && <Text style={styles.errorText}>{emailError}</Text>}
             <TextInput
@@ -286,13 +279,13 @@ const formattedDate = `${year}-${month}-${day}`;
               value={phone}
               onChangeText={setPhone}
               onBlur={validatePhone}
+              keyboardType="phone-pad"
             />
             {phoneError !== '' && <Text style={styles.errorText}>{phoneError}</Text>}
-            
 
-          <View style={styles.inputContainer}>
+          <View style={styles.passwordInputContainer}>
             <TextInput
-              style={styles.input}
+              style={styles.passwordInput}
               placeholder="Password"
               secureTextEntry={!showPassword}
               value={password}
@@ -300,16 +293,17 @@ const formattedDate = `${year}-${month}-${day}`;
               onBlur={validatePassword}
             />
             <TouchableOpacity
-              onPress={() => setShowPassword(!showPassword)} // Toggle showPassword state
+              onPress={() => setShowPassword(!showPassword)}
               style={styles.showPasswordButton}
             >
               <Ionicons
-                name={showPassword ? 'eye-off' : 'eye'} // Use 'eye' icon when showing password, 'eye-off' when hiding
+                name={showPassword ? 'eye-off' : 'eye'}
                 size={24}
                 color="#2B60DA"
               />
             </TouchableOpacity>
           </View>
+
 
             {passwordError !== '' && <Text style={styles.errorText}>{passwordError}</Text>}
             <TouchableOpacity
@@ -345,9 +339,10 @@ const formattedDate = `${year}-${month}-${day}`;
             />
             {emailError !== '' && <Text style={styles.errorText}>{emailError}</Text>}
 
-            <View style={styles.inputContainer}>
+
+          <View style={styles.passwordInputContainer}>
             <TextInput
-              style={styles.input}
+              style={styles.passwordInput}
               placeholder="Password"
               secureTextEntry={!showPassword}
               value={password}
@@ -355,16 +350,17 @@ const formattedDate = `${year}-${month}-${day}`;
               onBlur={validatePassword}
             />
             <TouchableOpacity
-              onPress={() => setShowPassword(!showPassword)} // Toggle showPassword state
+              onPress={() => setShowPassword(!showPassword)}
               style={styles.showPasswordButton}
             >
               <Ionicons
-                name={showPassword ? 'eye-off' : 'eye'} // Use 'eye' icon when showing password, 'eye-off' when hiding
+                name={showPassword ? 'eye-off' : 'eye'}
                 size={24}
                 color="#2B60DA"
               />
             </TouchableOpacity>
           </View>
+
 
             {passwordError !== '' && <Text style={styles.errorText}>{passwordError}</Text>}
             <TouchableOpacity
@@ -448,15 +444,40 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 10,
   },
+
   input: {
-    borderWidth: 3,
-    borderColor: '#CCCCCC',
-    borderRadius: 5,
-    paddingHorizontal: 10,
-    paddingVertical: 5,
+    borderWidth: 2,
+    borderColor: '#2B60DA',
+    borderRadius: 8,
+    paddingHorizontal: 16,
+    paddingVertical: 12,
     marginBottom: 10,
-    backgroundColor:'#CCC',
-    fontWeight:'900'
+    backgroundColor: '#F5F5F5',
+    fontWeight: 'bold',
+    fontSize: 16,
+  },
+
+  
+  passwordInputContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderWidth: 2,
+    borderColor: '#2B60DA',
+    borderRadius: 8,
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+    marginBottom: 10,
+    backgroundColor: '#F5F5F5',
+  },
+
+  passwordInput: {
+    flex: 1,
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+
+  showPasswordButton: {
+    padding: 8,
   },
   modalButton: {
     backgroundColor: '#2B60DA',

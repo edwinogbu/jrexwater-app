@@ -22,13 +22,6 @@ export function CartIcon({ navigation }) {
             navigation.navigate('Cart');
           }}
         />
-        {/* <Text
-          onPress={() => {
-            navigation.navigate('Cart');
-          }}
-        >
-          Cart ({count})
-        </Text> */}
       </View>
     </View>
   );

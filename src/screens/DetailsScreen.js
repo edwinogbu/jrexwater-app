@@ -4,7 +4,6 @@ import { SafeAreaView, StyleSheet, View, Text, Image, TouchableOpacity } from 'r
 import { ScrollView } from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import COLORS from '../global/LandingColors';
-import { SecondaryButton } from '../components/Button';
 import products from './../global/constants/products';
 import { CartContext } from '../CartContext';
 import { useNavigation } from '@react-navigation/native';

@@ -1,4 +1,5 @@
 import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from 'firebase/firestore';
 import { getDatabase } from "firebase/database";
 import { getAuth } from 'firebase/auth';
@@ -18,8 +19,11 @@ const firebaseConfig = {
 
 };
 
-// Initialize Firebase
+
 const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
+// Initialize Firebase
 
 
 // Initialize other Firebase services
@@ -31,6 +35,6 @@ const auth = getAuth(app);
 // Initialize Firebase Storage
 const storage = getStorage(app);
 
-export { app, db, database, auth, firestore, storage }; // Include storage in exports
+export {analytics, app, db, database, auth, firestore, storage }; // Include storage in exports
 
 

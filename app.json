@@ -23,14 +23,14 @@
         "backgroundColor": "#ffffff"
       },
       "package": "com.blessedcoder40.jrexwaterapp",
-      "versionCode":2
+      "versionCode": 2
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "extra": {
       "eas": {
-        "projectId": "5b1ccef7-4ce8-496a-8996-07e5a918fd70"
+        "projectId": "40daed1b-7ed2-4fe7-94f3-ada6c09e4eff"
       }
     }
   }

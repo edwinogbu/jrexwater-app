@@ -2,14 +2,14 @@ import React, { useContext, useState, useEffect } from 'react';
 import { View, TouchableOpacity, Switch, StyleSheet } from 'react-native';
 import { Avatar, Text } from 'react-native-elements';
 import { DrawerContentScrollView, DrawerItem } from '@react-navigation/drawer';
-import { Ionicons, MaterialCommunityIcons, FontAwesome5 } from '@expo/vector-icons';
+import { Ionicons, MaterialCommunityIcons, } from '@expo/vector-icons';
 import COLORS from './../global/LandingColors';
 import { SignInContext } from './../contexts/authContext';
 import { auth, db, firestore, } from './../../firebase';
-import { setDoc, addDoc, getDoc, collection, doc, getDocs, query, where } from 'firebase/firestore';
+import {  getDoc, collection, doc, } from 'firebase/firestore';
 
 const DrawerContent = (props) => { // Pass navigation prop
-  const { signedIn, dispatchSignedIn, createUser, signIn, logout, user, handleSignOut, setUser } = useContext(SignInContext);
+  const { logout, user, handleSignOut, setUser } = useContext(SignInContext);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [userData, setUserData] = useState({});
   const [checkUser, setCheckUser] = useState([]);
