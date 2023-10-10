@@ -5,7 +5,7 @@ import {CartContext} from '../CartContext';
 
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import COLORS from '../global/LandingColors';
-// import { PrimaryButton } from '../components/Button';
+import { PrimaryButton } from '../components/Button';
 import { SignInContext } from '../contexts/authContext';
 
 // import {  auth, db, firestore, addDoc, collection } from './../components/config';

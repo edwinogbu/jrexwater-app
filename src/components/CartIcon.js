@@ -22,6 +22,7 @@ export function CartIcon({ navigation }) {
             navigation.navigate('Cart');
           }}
         />
+
       </View>
     </View>
   );
